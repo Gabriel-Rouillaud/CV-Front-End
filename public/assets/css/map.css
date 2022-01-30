@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Sephora";
+    list-style-type: none;
+}
+
+@font-face{
+    font-family: "Sephora";
+    src: url(../fonts/Sephora.ttf);
+}
+
+.resp{
+    height: auto;
+}
+
+body{
+    background: url(../img/pages/abstract-background-futuristic-sci-fi-hud-display_35887-351.jpg);
+    background-size: contain ;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin: calc(50%-50%);
+}
+
+main>iframe{
+    width: 1100px;
+    height: 600px;
+    border-style: solid 2px black;
+    transform: translateX(50%-50%);
+}
+
+@média screen and (min-width:576px) and (max-width:800px){
+
+}

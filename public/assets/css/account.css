@@ -1,0 +1,43 @@
+body{
+    background: url("../img/pages/account.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.welcome{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 50px;
+}
+
+.account{
+    width: 100%;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.logout{
+    color: red;
+}
+
+@media screen and(max-width: 800px){
+
+    li{
+        display: none;
+    }
+
+    body{
+        background-size: contain;
+    }
+
+}
