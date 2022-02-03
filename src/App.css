@@ -6,6 +6,10 @@
   text-decoration: none;
 }
 
+a, p, h1, h2 {
+  color: white;
+}
+
 @font-face{
   font-family: "Sephora";
   src: url(../public/assets/fonts/Sephora.ttf);

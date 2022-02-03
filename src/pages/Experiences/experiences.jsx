@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 
 class Experiences extends Component{
+
     render() {
+
+        const experiencesStyle = {
+            backgroundImage: "url('assets/img/pages/professional.jpg')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+        }
+
         return(
 <>
-            <main class="professionnal uk-background-cover">
-                <div class="uk-overlay-primary uk-position-cover"></div>
+            <main style={experiencesStyle}>
+
 
                 <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
                     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
@@ -72,8 +81,6 @@ class Experiences extends Component{
                         <a href="#" class="uk-button uk-button-text">Read more</a>
                     </div>
                     </div>
-
-                    <button type="button" name="button" class="uk-icon-button uk-position-bottom-right uk-margin-right uk-margin-bottom" uk-icon="menu" uk-toggle="target: #offcanvas-nav-primary"></button>
                     
             </main>
 

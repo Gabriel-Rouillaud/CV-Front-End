@@ -16,12 +16,15 @@ function NothingHere () {
         justifyContent: "space-around",
         alignItems: "center",
         color: "white",
+        h2:{
+            color: "red",
+        }
     };
 
     return (
         <main style={nothingStyle}>
             <h1>OUPS ! Sorry there is nothing here !</h1>
-            <h2>Error 404</h2>
+            <h2 style={nothingStyle.h2}>Error 404</h2>
             <p>Return to <Link to="/">HOME</Link></p>
         </main>
         

@@ -10,18 +10,20 @@ class Home extends Component {
         this.state = {
             error: null,
             isLoaded: false,
-            items: []
+            All: []
         };
     };
 
     componentDidMount() {
-        fetch("https://us-central1-rouillaud-devcompagny.cloudfunctions.net/api/")
+        fetch("https://us-central1-rouillaud-devcompagny.cloudfunctions.net/api/profile"),
+        fetch("https://us-central1-rouillaud-devcompagny.cloudfunctions.net/api/profile/contact"),
+        fetch("https://us-central1-rouillaud-devcompagny.cloudfunctions.net/api/skills")
             .then(res => res.json())
             .then(
                 (result) => {
                     this.setState({
                         isLoaded: true,
-                        items: result.items
+                        All: result.all
                     });
                 },
                 (error) => {
@@ -44,38 +46,80 @@ class Home extends Component {
             backgroundImage: "url('assets/img/pages/pexels-egil-sjøholt-1906658.jpg')",
             backgroundAttachment: "fixed",
             backgroundSize: "cover",
+            firstImg: {
+                backgroundSize: "cover",
+                width: "100%",
+                height: "auto",
+            },
+            introSection: {
+                display: "flex",
+                justifyContent: "Center",
+            },
+            secondImg: {
+                borderRadius: "50%"
+            },
+            skillSection: {
+                display: "flex",
+                justifyContent: "center"
+            }
         };
 
-        return (
-            <>
-                <div style={homeStyle}>
-                    <Header/>
-                    <main>
-                        <section className='uk-animation-toggle'>
-                            <div className='uk-animation-slide-right'>
-                                <img src="" alt=""/>
+        //const { error, isLoaded, All } = this.state;
+        //if (error) {
+            //return <div>Erreur : {error.message}</div>;
+        //} else if (!isLoaded) {
+            //return <div>Chargement…</div>;
+        //} else {
+
+            return (
+                <>
+                    <div style={homeStyle}>
+                        <Header/>
+                        <main>
+
+                            <div style={homeStyle.firstImg} className='uk-animation-slide-right'>
+                                <img src="assets/img/logos/Mylinkedin.png" alt="Moi-même"/>
                             </div>
 
-                            <article>
+                            <section style={homeStyle.introSection}>
                                 <div>
-                                    <img src="" alt=""/>
+                                    <img style={homeStyle.secondImg} src="" alt=""/>
                                 </div>
 
-                                <p>coucou</p>
-                            </article>
+                                <h2>Bienvenue sur mon CV personnel</h2>
 
+                                <p></p>
+                            </section>
 
-                        </section>
+                            <section style={homeStyle.skillSection}>
+                                <h2>Mes Skills</h2>
+                                <h3>Mes Hard Skills</h3>
+                                <div></div>
+                                <h3>Mes Softs Skills</h3>
+                                <div></div>
+                                <h3>Les outils que j'utilise</h3>
+                                <div></div>
+                            </section>
 
-                        <section>
+                            <section>
+                                <h2>Mes Experiences</h2>
+                                <div></div>
+                            </section>
 
-                        </section>
-                    </main>
-                    <Footer/>
-                </div>
-            </>
-        );
-    }
-}
+                            <section>
+                                <h2>Mes Formations</h2>
+                                <div></div>
+                            </section>
+
+                            <section>
+
+                            </section>
+                        </main>
+                        <Footer/>
+                    </div>
+                </>
+            );
+        }
+};
 
 export default Home;

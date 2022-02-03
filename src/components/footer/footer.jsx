@@ -19,15 +19,36 @@ class Footer extends Component {
 
         return (
             <footer style={footerStyle}>
+                <nav>
+                    <div>
+                        <img src="" alt="" />
+                    </div>
+                    <div>
+                        <img src="" alt="" />
+                    </div>
+                    <div>
+                        <img src="" alt="" />
+                    </div>
+                </nav>
+
                 <div>
-                    <img src="" alt="" />
+                    <button uk-icon="icon: info; ratio: 2" href="#modal-center" uk-toggle></button>
+                    <div id="modal-center" className="uk-flex-top" uk-modal>
+                        <div className="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                            <button className="uk-modal-close-default" type="button" uk-close></button>
+
+                            <div className="">
+                                <h2>Front-End</h2>
+                            </div>
+                            <div className="">
+                                <h2>Back-End</h2>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="" alt="" />
-                </div>
-                <div>
-                    <img src="" alt="" />
-                </div>
+
                 
             </footer>
         )
