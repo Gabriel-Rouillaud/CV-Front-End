@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 
 class WorkInProgress extends Component{
 
@@ -22,6 +23,7 @@ class WorkInProgress extends Component{
         <>
         <main style={workinStyle}>
             <p>Sorry this page is in work in progress</p>
+            <p>Return to <Link to="/">HOME</Link></p>
             <p>Please come back later</p>
         </main>
         </>)

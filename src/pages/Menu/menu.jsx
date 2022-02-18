@@ -53,7 +53,7 @@ class Menu extends Component {
                     </Link>
 
                     <Link to="/">
-                        <button id="backhome" uk-icon="icon: home; ratio: 2" className="uk-icon-button uk-position-center uk-icon"></button>
+                        <button id="backhome" uk-icon="icon: home; ratio: 2" className="uk-icon-button uk-position-center uk-icon"/>
                     </Link>
 
                     <Link style={menuStyle.experiences} className="professionnal uk-background-cover uk-width-1-2 uk-link-reset uk-flex uk-flex-center uk-flex-middle" to="/experiences">

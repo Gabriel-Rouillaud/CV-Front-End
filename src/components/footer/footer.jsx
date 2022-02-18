@@ -1,59 +1,74 @@
 import React, { Component } from 'react';
+import TechnoModal from "../modals/technos/techno";
 
-class Footer extends Component {
+export default class Footer extends Component {
 
-    render(){
+    /*constructor(props) {
+        super(props);
+        this.state = {
+            error: null,
+            isLoaded: false,
+            All: []
+        };
+    };
 
-        const footerStyle = {
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-            height: "30px",
-            background: "rgba( 18, 6, 6, 0.25 )",
-            boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-            backdropFilter: "blur( 20px )",
-            border: "1px solid rgba( 255, 255, 255, 0.18 )",
-        }
+    componentDidMount() {
+        fetch("https://us-central1-rouillaud-devcompagny.cloudfunctions.net/api/skills/hard_skills")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        isLoaded: true,
+                        All: result.all
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
+                }
+            )
+    }*/
 
-    
+    render() {
 
-        return (
-            <footer style={footerStyle}>
-                <nav>
+        /*const {error, isLoaded, All} = this.state;
+        if (error) {
+            return <div>Erreur : {error.message}</div>;
+        } else if (!isLoaded) {
+            return <div>Chargement…</div>;
+        } else {*/
+
+
+            const footerStyle = {
+                display: "flex",
+                justifyContent: "space-evenly",
+                background: "rgba( 18, 6, 6, 0.25 )",
+                boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+                backdropFilter: "blur( 20px )",
+                color: "white"
+            };
+
+
+            return (
+                <footer style={footerStyle}>
+
                     <div>
-                        <img src="" alt="" />
-                    </div>
-                    <div>
-                        <img src="" alt="" />
-                    </div>
-                    <div>
-                        <img src="" alt="" />
-                    </div>
-                </nav>
-
-                <div>
-                    <button uk-icon="icon: info; ratio: 2" href="#modal-center" uk-toggle></button>
-                    <div id="modal-center" className="uk-flex-top" uk-modal>
-                        <div className="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-
-                            <button className="uk-modal-close-default" type="button" uk-close></button>
-
-                            <div className="">
-                                <h2>Front-End</h2>
-                            </div>
-                            <div className="">
-                                <h2>Back-End</h2>
-                            </div>
-
+                        <div className="uk-margin-medium">
+                            <p>Hosted by</p>
+                            <span  data-uk-icon="icon: github-alt; ratio: 2"/>
                         </div>
                     </div>
-                </div>
 
-                
-            </footer>
-        )
+                    <div className="uk-flex uk-flex-middle">
+                        <a data-uk-icon="icon: info; ratio: 2" uk-toggle="target: #technos" data-uk-toggle/>
+                        <TechnoModal/>
+                    </div>
+
+                </footer>
+            )
 
     };
-};
 
-export default Footer;
+};
