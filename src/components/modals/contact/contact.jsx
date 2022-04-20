@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-export default class Contact extends Component{
+export default class ModalContact extends Component{
 
     render() {
 
@@ -24,7 +24,7 @@ export default class Contact extends Component{
                         </div>
                         <div>
                             <span uk-icon="icon: linkedin; ratio: 2"/>
-                            <p>linkedin.com/in/gabriel-rouillaud</p>
+                            <p>https://www.linkedin.com/in/gabriel-rouillaud/</p>
                         </div>
                         <div>
                             <span uk-icon="icon: github; ratio: 2"/>

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
-import Contact from "../../components/modals/contact/contact";
+import Contact from "../../components/buttons/contact";
 import Totop from "../../components/totop/totop";
 import Card from "../../components/card/card";
 import Download from "../../components/buttons/download";
+import Availability from "../../components/buttons/availability";
 
 export default class Home extends Component {
 
@@ -37,10 +38,22 @@ export default class Home extends Component {
                 height: "auto"
             },
             img: {
-                width: "100px",
-                height: "100px",
+                type1: {
+                    width: "100px",
+                    height: "100px"
+                },
+                type2: {
+                    width: "100px",
+                    height: "100 auto"
+                },
+                type3: {
+                    width: "250px",
+                    height: "250 auto"
+                }
             }
         };
+
+        document.title = "Bienvenue";
 
             return (
                 <>
@@ -51,27 +64,25 @@ export default class Home extends Component {
                             <section style={homeStyle.section} id="top">
 
                                 <div className="uk-card uk-card-secondary uk-card-body">
-                                    <h1 className="uk-card-title">Bienvenue sur mon CV personnel</h1>
+                                    <h1>Bienvenue sur mon webCV</h1>
                                 </div>
 
                                 <div className="uk-margin uk-margin-medium">
-                                    <img style={homeStyle.firstImg} className="uk-border-circle" src="assets/img/GR.png" alt=""/>
+                                    <img style={homeStyle.firstImg} className="uk-border-circle" src="assets/img/GR.jpg" alt=""/>
                                 </div>
 
-                                <Card className="uk-card uk-card-secondary uk-card-body uk-margin uk-margin-medium uk-container">
-                                    <p style={homeStyle.a}>"Passionné de tech depuis petit, gérer un
-                                        ordinateur est pour moi comme une seconde
-                                        nature, j’atteins toujours mon but quoi qu'il
-                                        arrive et c'est pourquoi j'aimerai devenir
-                                        Développeur web FullStack"
+                                <Card className="uk-container">
+                                    <h2>Développeur Android en alternance</h2>
+                                    <p style={homeStyle.a}>
+                                        "Passionné de tech depuis l'enfance, gérer un ordinateur est pour moi comme une seconde nature. Persévérent, déterminé à atteindre mes buts, je démarre une formation de développeur Android et j'aimerai rejoindre une entreprise, qui me permette d'acquérir ces compétences."
                                     </p>
                                 </Card>
 
                             </section>
 
-                            <Card>
-                                <h2 className="uk-card-title">Mes Skills</h2>
-                            </Card>
+                            <div className="uk-card uk-card-secondary uk-card-body uk-margin uk-margin-medium">
+                                <h2>Mes Skills</h2>
+                            </div>
 
                             <section>
 
@@ -81,27 +92,30 @@ export default class Home extends Component {
 
                                 <div style={homeStyle.slider} data-uk-slider tabIndex="0" data-uk-slider="center: true">
                                     <div className="uk-slider-container uk-position-relative uk-visible-toggle uk-light">
-                                        <ul className="uk-slider-items uk-child-width-auto uk-child-width-1-5@m" data-uk-grid>
+                                        <ul className="uk-slider-items uk-child-width-auto uk-child-width-1-3@m" data-uk-grid>
                                             <li>
-                                                <img style={homeStyle.img}  src="assets/img/html5.svg.png" alt=""/>
+                                                <img style={homeStyle.img.type2}  src="assets/img/html5.svg.png" alt=""/>
                                             </li>
                                             <li>
-                                                <img style={homeStyle.img}  src="assets/img/css3.svg.png" alt=""/>
+                                                <img style={homeStyle.img.type2}  src="assets/img/css3.svg.png" alt=""/>
                                             </li>
                                             <li>
-                                                <img style={homeStyle.img}  src="assets/img/javascript.svg.png" alt=""/>
+                                                <img style={homeStyle.img.type2}  src="assets/img/javascript.svg.png" alt=""/>
                                             </li>
                                             <li>
-                                                <img style={homeStyle.img}  src="assets/img/nodejs.png" alt=""/>
+                                                <img style={homeStyle.img.type2}  src="assets/img/React.png" alt=""/>
                                             </li>
                                             <li>
-                                                <img style={homeStyle.img}  src="assets/img/bootstrap-logo.png" alt=""/>
+                                                <img style={homeStyle.img.type2}  src="assets/img/nodejs.png" alt=""/>
                                             </li>
                                             <li>
-                                                <img style={homeStyle.img}  src="assets/img/php.png" alt=""/>
+                                                <img style={homeStyle.img.type2}  src="assets/img/bootstrap-logo.png" alt=""/>
                                             </li>
                                             <li>
-                                                <img style={homeStyle.img}  src="assets/img/symfony.png" alt=""/>
+                                                <img style={homeStyle.img.type2}  src="assets/img/php.png" alt=""/>
+                                            </li>
+                                            <li>
+                                                <img style={homeStyle.img.type2}  src="assets/img/symfony.jpg" alt=""/>
                                             </li>
                                         </ul>
                                         <a className="uk-position-center-left uk-position-small uk-hidden-hover uk-icon-button"
@@ -111,31 +125,35 @@ export default class Home extends Component {
                                     </div>
                                 </div>
 
-                                <Card>
+                                <div className="uk-card uk-card-secondary uk-card-body uk-margin uk-margin-medium">
                                     <h3>Mes Soft Skills</h3>
-                                </Card>
+                                </div>
 
                                 <div style={homeStyle.slider} data-uk-slider tabIndex="0" uk-slider="center: true">
                                     <div className="uk-slider-container uk-position-relative uk-visible-toggle uk-light">
                                         <ul className="uk-flex uk-slider-items uk-child-width-auto uk-child-width-auto uk-child-width-1-3@m uk-grid-large" data-uk-grid>
                                             <li className="uk-flex-column uk-flex-center">
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/empathie.png" alt=""/>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/autodidacte.png" alt=""/>
+                                                <p>Autodidacte</p>
+                                            </li>
+                                            <li className="uk-flex-column uk-flex-center">
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/empathie.png" alt=""/>
                                                 <p>Empathie</p>
                                             </li>
                                             <li className="uk-flex-column uk-flex-center">
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/agilite.png" alt=""/>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/agilite.png" alt=""/>
                                                 <p>Agilité</p>
                                             </li>
                                             <li className="uk-flex-column uk-flex-center">
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/adaptable.png" alt=""/>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/adaptable.png" alt=""/>
                                                 <p>Adaptable</p>
                                             </li>
                                             <li className="uk-flex-column uk-flex-center">
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/rigueur.png" alt=""/>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/rigueur.png" alt=""/>
                                                 <p>Rigueur</p>
                                             </li>
                                             <li className="uk-flex-column uk-flex-center">
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/intelligence-emotion.png" alt=""/>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/intelligence-emotion.png" alt=""/>
                                                 <p>Intelligence emotionnelle</p>
                                             </li>
                                         </ul>
@@ -146,31 +164,30 @@ export default class Home extends Component {
                                     </div>
                                 </div>
 
-                                <Card>
+                                <div className="uk-card uk-card-secondary uk-card-body uk-margin uk-margin-medium">
                                     <h3>Les outils que j'utilise</h3>
-                                </Card>
+                                </div>
 
                                 <div style={homeStyle.slider} data-uk-slider uk-slider="center: true">
                                     <div className="uk-slider-container uk-position-relative uk-visible-toggle uk-light">
                                         <ul className="uk-flex uk-slider-items uk-child-width-auto uk-child-width-1-3@m uk-grid" data-uk-grid>
                                             <li>
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/webstorm.png" alt=""/>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/webstorm.png" alt=""/>
                                             </li>
                                             <li>
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/vscode.png" alt=""/>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/vscode.png" alt=""/>
                                             </li>
                                             <li className="uk-flex-column uk-flex-center">
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/linux.png" alt=""/>
-                                                <p>WSL</p>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/linux.png" alt=""/>
                                             </li>
                                             <li>
-                                                 <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/git.png" alt=""/>
+                                                 <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/git.png" alt=""/>
                                             </li>
                                             <li>
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/composer.png" alt=""/>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/composer.png" alt=""/>
                                             </li>
                                             <li>
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/npm.png" alt=""/>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/npm.png" alt=""/>
                                             </li>
                                         </ul>
                                         <a className="uk-position-center-left uk-position-small uk-hidden-hover uk-icon-button"
@@ -180,119 +197,135 @@ export default class Home extends Component {
                                     </div>
                                 </div>
 
-                                <Card>
+                                <div className="uk-card uk-card-secondary uk-card-body uk-margin uk-margin-medium">
                                     <h3>Les langues que je parles</h3>
+                                </div>
+
+                                <div>
+                                    <div className="uk-slider-container uk-position-relative uk-visible-toggle uk-light">
+                                        <ul className="uk-flex uk-flex-around">
+                                            <li>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/united-kingdom.png" alt=""/>
+                                            </li>
+                                            <li>
+                                                <img style={homeStyle.img.type1} className="uk-border-pill"  src="assets/img/frenchy.png" alt=""/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <div className="uk-card uk-card-secondary uk-card-body uk-margin uk-margin-medium">
+                                <h2>Mes Projets en cours</h2>
+                            </div>
+
+                            <section>
+                                <div>
+                                    <div className="uk-position-relative uk-visible-toggle uk-light">
+                                        <ul className="uk-flex uk-flex-around">
+                                            <li className="uk-flex-column uk-flex-center">
+                                                <img style={homeStyle.img.type1} className="uk-border-pill" src="assets/img/tavern.png" alt="Tavern"/>
+                                                <p>Tavern</p>
+                                            </li>
+                                            <li className="uk-flex-column uk-flex-center">
+                                                <img style={homeStyle.img.type1} className="uk-border-pill" src="assets/img/skrall.png" alt="Skrall"/>
+                                                <p>Skrall Animation</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <div className="uk-card uk-card-secondary uk-card-body uk-margin uk-margin-medium">
+                                <h2>Mon parcours</h2>
+                            </div>
+
+                            <section className="uk-flex uk-flex-around@m uk-flex-center uk-margin uk-margin-large uk-grid-medium" data-uk-grid>
+
+                                <Card>
+                                    <div className="uk-card-header">
+                                        <div className="uk-flex uk-flex-center" data-uk-grid>
+                                            <div className="uk-width-auto">
+                                                <img style={homeStyle.img.type3} src="assets/img/LaPiscine.png"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="uk-card-body">
+                                        <p>
+                                            Titre RNCP de niveau 5 (bac+2) Développeur Web/Web mobile (2021)
+                                        </p>
+                                        <p>
+                                            - Ergonomie et expérience utilisateur
+                                        </p>
+                                        <p>
+                                            - Créer une interface utilisateur HTML/CSS & Javascript
+                                        </p>
+                                        <p>
+                                            - Langage Back-End PHP et son framework Symfony
+                                        </p>
+                                        <p>
+                                            - Concept des bases de données SQL
+                                        </p>
+                                    </div>
                                 </Card>
 
-                                <div style={homeStyle.slider} data-uk-slider tabIndex="0" uk-slider="center: true">
-                                    <div className="uk-slider-container uk-position-relative uk-visible-toggle uk-light">
-                                        <ul className="uk-flex uk-flex-around@m">
-                                            <li>
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/webstorm.png" alt=""/>
-                                            </li>
-                                            <li>
-                                                <img style={homeStyle.img} className="uk-border-pill"  src="assets/img/vscode.png" alt=""/>
-                                            </li>
-                                        </ul>
+                                <Card>
+                                    <div className="uk-card-header">
+                                        <div className="uk-flex uk-flex-center" data-uk-grid>
+                                            <div className="uk-width-auto">
+                                                <img style={homeStyle.img.type3} src="assets/img/OpenClassrooms.png"/>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div className="uk-card-body">
+                                        <p>
+                                            Titre RNCP de niveau 6 (bac+3) Développeur Android (2022-2024)
+                                        </p>
+                                        <p>
+                                            - Créer des applications Android grâce au langage Java
+                                        </p>
+                                        <p>
+                                            - Concevoir l’architecture technique d’une application
+                                        </p>
+                                        <p>
+                                            - Apporter des corrections de bugs et d’effectuer des mises à jour
+                                        </p>
+                                        <p>
+                                            - Produire une documentation technique et fonctionnelle pour le client
+                                        </p>
+                                    </div>
+                                </Card>
 
+                                <Card>
+                                    <div className="uk-card-header">
+                                        <div className="uk-flex uk-flex-center" data-uk-grid>
+                                            <div className="uk-width-auto">
+                                                <img style={homeStyle.img.type3} src="assets/img/saint-genès.png"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="uk-card-body">
+                                        <p> -Baccalauréat Professionnelle Vente section
+                                                            européenne avec mention (2018)
+                                        </p>
+                                        <p>
+                                                            -BEP Métiers Relation clients et usagers
+                                                            (2017)
+                                        </p>
+                                        <p>
+                                                            -CAP préparation des ouvrages électriques
+                                                            (2015)
+                                        </p>
+                                    </div>
+                                </Card>
                             </section>
 
-                            <Card>
-                                <h2 className="uk-card-title">Mes Projets en cours</h2>
-                            </Card>
-
-                            <section>
-
-                                <div style={homeStyle.slider} data-uk-slider tabIndex="0" uk-slider="center: true">
-                                    <div className="uk-slider-container uk-position-relative uk-visible-toggle uk-light">
-                                        <ul className="uk-flex uk-flex-around@m">
-                                            <li>
-                                                <img style={homeStyle.img}  src="assets/img/html5.svg.png" alt=""/>
-                                            </li>
-                                            <li>
-                                                <img style={homeStyle.img}  src="assets/img/css3.svg.png" alt=""/>
-                                            </li>
-                                            <li>
-                                                <img style={homeStyle.img}  src="assets/img/javascript.svg.png" alt=""/>
-                                            </li>
-                                            <li>
-                                                <img style={homeStyle.img}  src="assets/img/nodejs.png" alt=""/>
-                                            </li>
-                                            <li>
-                                                <img style={homeStyle.img}  src="assets/img/bootstrap-logo.png" alt=""/>
-                                            </li>
-                                            <li>
-                                                <img style={homeStyle.img}  src="assets/img/php.png" alt=""/>
-                                            </li>
-                                            <li>
-                                                <img style={homeStyle.img}  src="assets/img/symfony.png" alt=""/>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <Card>
-                                <h2 className="uk-card-title">Mon parcours</h2>
-                            </Card>
-
-                            <section>
-
-                                <div style={homeStyle.slider} data-uk-slider tabIndex="0" uk-slider="center: true">
-                                    <div>
-                                        <ul className="uk-flex uk-flex-around@m">
-                                            <li>
-                                                <div className="uk-card uk-card-default uk-width-1-2@m">
-                                                    <div className="uk-card-header">
-                                                        <div className="uk-grid-small uk-flex-middle" uk-grid>
-                                                            <div className="uk-width-auto">
-                                                                <img className="uk-border-circle"
-                                                                     src="assets/img/saint-genès.png"/>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="uk-card-body">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                            do eiusmod tempor incididunt.</p>
-                                                    </div>
-                                                    <div className="uk-card-footer">
-                                                        <a href="#" className="uk-button uk-button-text">Read more</a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="uk-card uk-card-default uk-width-1-2@m">
-                                                    <div className="uk-card-header">
-                                                        <div className="uk-grid-small uk-flex-middle" uk-grid>
-                                                            <div className="uk-width-auto">
-                                                                <img className="uk-border-circle"
-                                                                     src="assets/img/saint-genès.png"/>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="uk-card-body">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                            do eiusmod tempor incididunt.</p>
-                                                    </div>
-                                                    <div className="uk-card-footer">
-                                                        <a href="#" className="uk-button uk-button-text">Read more</a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <section className="uk-flex uk-flex-around@m uk-margin uk-margin-large">
+                            <section className="uk-flex uk-flex-around@m uk-flex-center uk-margin uk-margin-large uk-grid-medium" data-uk-grid>
                                 <Download/>
-                                <a className="uk-button uk-button-primary" uk-toggle="target: #contact">
-                                    <span data-uk-icon="icon: receiver" className="uk-icon"/>
-                                    Me contacter
-                                </a>
-                                <Contact id="contact"/>
+                                <Availability/>
+                                <Contact/>
                             </section>
                             <Totop/>
                         </main>

@@ -35,7 +35,7 @@ export default class Totop extends Component{
         const { is_visible } = this.state;
 
         return(
-            <a style={{display : is_visible ? 'block' : 'none'}} href="#totop" className="uk-position-fixed uk-position-medium uk-position-bottom-right uk-icon-button" data-uk-totop data-uk-scroll/>
+            <a style={{display : is_visible ? 'flex' : 'none'}} href="#totop" className="uk-position-fixed uk-position-medium uk-position-bottom-right uk-icon-button" data-uk-totop data-uk-scroll/>
         )
     };
 };

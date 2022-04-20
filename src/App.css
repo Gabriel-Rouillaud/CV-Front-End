@@ -1,4 +1,5 @@
 *{
+  font-family: audiowide;
   padding: 0;
   list-style-type: none;
   text-decoration: none;
@@ -11,11 +12,15 @@ a p h1 h2 h3 {
 li {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 @font-face{
-  font-family: "Shared";
-  src: url(../public/assets/fonts/Shared-jEr4G.ttf);
+  font-family: "tangerine";
+  src: url(../public/assets/fonts/Tangerine-Regular.ttf);
+
+  font-family: "audiowide";
+  src: url(../public/assets/fonts/Audiowide-Regular.ttf);
 }
 
 body{

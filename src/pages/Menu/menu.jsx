@@ -41,27 +41,27 @@ class Menu extends Component {
             <main>
                 <section style={menuStyle.sectionMenu} className="uk-section uk-flex uk-flex-wrap uk-section-secondary">
 
-                    <Link style={menuStyle.skills} className="skills uk-background-cover uk-width-1-2 uk-link-reset uk-margin-medium-bottom uk-flex uk-flex-center uk-flex-middle" to="/skills">
+                    <Link style={menuStyle.skills} className="uk-background-cover uk-width-1-2 uk-link-reset uk-margin-medium-bottom uk-flex uk-flex-center uk-flex-middle" to="/skills">
                         <div>
-                            <p>Mes compétences</p>
+                            <p>Mes Compétences</p>
                         </div>
                     </Link>
 
 
-                    <Link style={menuStyle.projects} className="projects uk-background-cover uk-width-1-2 uk-link-reset uk-margin-medium-bottom uk-flex uk-flex-center uk-flex-middle" to="/projects">
-                        <p>Mes projets</p>
+                    <Link style={menuStyle.projects} className="uk-background-cover uk-width-1-2 uk-link-reset uk-margin-medium-bottom uk-flex uk-flex-center uk-flex-middle" to="/projects">
+                        <p>Mes Projets</p>
                     </Link>
 
                     <Link to="/">
                         <button id="backhome" uk-icon="icon: home; ratio: 2" className="uk-icon-button uk-position-center uk-icon"/>
                     </Link>
 
-                    <Link style={menuStyle.experiences} className="professionnal uk-background-cover uk-width-1-2 uk-link-reset uk-flex uk-flex-center uk-flex-middle" to="/experiences">
-                        <p>Mes expériences</p>
+                    <Link style={menuStyle.experiences} className="uk-background-cover uk-width-1-2 uk-link-reset uk-flex uk-flex-center uk-flex-middle" to="/experiences">
+                        <p>Mes Expériences</p>
                     </Link>
 
-                    <Link style={menuStyle.trainings} className="formation uk-background-cover uk-width-1-2 uk-link-reset uk-flex uk-flex-center uk-flex-middle" to="/trainings">
-                        <p>Mes formations effectuées</p>
+                    <Link style={menuStyle.trainings} className="uk-background-cover uk-width-1-2 uk-link-reset uk-flex uk-flex-center uk-flex-middle" to="/trainings">
+                        <p>Mon Parcours</p>
                     </Link>
 
                 </section>
