@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {margin: 0; padding: 0}
+        body {background: #000;}
+        canvas {display: block;}
+        div{
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        p{
+            text-align: center;
+            color: darkgreen;
+        }
+    </style>
+    <title>Error 404</title>
+</head>
+<body>
+    <canvas></canvas>
+    <div>
+        <p>Désolé, il n'y a rien ici ----- Error 404</p>
+    </div>
+    <script>
+        // Initialising the canvas
+            let canvas = document.querySelector('canvas'),
+            ctx = canvas.getContext('2d');
+    
+
+        // Setting the width and height of the canvas
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+        // Setting up the letters
+            let letters = '01010101010100111101010101010101010101010101011010110010101010100101011010111010101010101010101010101010101010101';
+            letters = letters.split('');
+
+        // Setting up the columns
+            let fontSize = 10,
+            columns = canvas.width / fontSize;
+
+        // Setting up the drops
+            let drops = [];
+            for (var i = 0; i < columns; i++) {
+            drops[i] = 1;
+            }
+
+        // Setting up the draw function
+            function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            for (var i = 0; i < drops.length; i++) {
+                var text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillStyle = '#0f0';
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                drops[i]++;
+                if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
+                drops[i] = 0;
+                }
+            }
+            }
+
+        // Loop the animation
+            setInterval(draw, 33);
+    </script>
+</body>
+</html>
